@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/VideoFragment">
+
+    <fragment
+        android:id="@+id/VideoFragment"
+        android:name="com.example.hamsterone.fragments.video.VideoFragment"
+        android:label="Video"
+        tools:layout="@layout/fragment_video" />
+
+    <fragment
+        android:id="@+id/ActorFragment"
+        android:name="com.example.hamsterone.fragments.actor.ActorFragment"
+        android:label="Actor"
+        tools:layout="@layout/fragment_actor" />
+
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.example.hamsterone.fragments.other.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/GalleryFragment"
+        android:name="com.example.hamsterone.fragments.other.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/BookmarkFragment"
+        android:name="com.example.hamsterone.fragments.bookmark.BookmarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+
+    <fragment
+        android:id="@+id/LockFragment"
+        android:name="com.example.hamsterone.fragments.other.LockFragment"
+        android:label="Lock"
+        tools:layout="@layout/fragment_lock" />
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.hamsterone.fragments.other.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+</navigation>

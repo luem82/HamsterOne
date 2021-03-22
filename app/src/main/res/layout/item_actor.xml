@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_actor_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pb_actor_load"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_actor_thumb"
+            app:layout_constraintEnd_toEndOf="@+id/iv_actor_thumb"
+            app:layout_constraintStart_toStartOf="@+id/iv_actor_thumb"
+            app:layout_constraintTop_toTopOf="@+id/iv_actor_thumb" />
+
+        <ImageView
+            android:id="@+id/iv_actor_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_circle_black_48dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_actor_thumb"
+            app:layout_constraintEnd_toEndOf="@+id/iv_actor_thumb"
+            app:layout_constraintStart_toStartOf="@+id/iv_actor_thumb"
+            app:layout_constraintTop_toTopOf="@+id/iv_actor_thumb" />
+
+        <TextView
+            android:id="@+id/tv_actor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgfound_gradient"
+            android:padding="4dp"
+            android:text="Leave some"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_actor_thumb"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gall_thumb"
+            app:layout_constraintStart_toStartOf="@+id/iv_gall_thumb" />
+
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_actor_thumb">
+
+            <TextView
+                android:id="@+id/tv_actor_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_visibility_black_24dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_actor_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_actor_views"
+                android:drawableLeft="@drawable/ic_video_library_black_24dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_actor_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/backgfound_tv_video_player"
+                android:clickable="true"
+                android:drawableTop="@drawable/ic_bookmark_black_24dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="4dp"
+                android:text="Add"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
